@@ -10,6 +10,7 @@
     <ApplicationIcon>App.ico</ApplicationIcon>
     <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
     <AssemblyName>mgcb-editor-wpf</AssemblyName>
+    <AssemblyTitle>MGCB Editor</AssemblyTitle>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,13 @@
 
     <Compile Include="Platform\Windows\**\*.cs" />
     <Compile Include="Platform\Utilities\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Templates\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Templates\%(Filename)%(Extension)</Link>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
